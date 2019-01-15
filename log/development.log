@@ -7284,3 +7284,21 @@ Processing by PostsController#show as HTML
   [1m[35mCACHE (0.0ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", "18"]]
   Rendered posts/show.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 27ms (Views: 15.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/new" for 68.42.76.249 at 2019-01-15 15:25:30 +0000
+Cannot render console from 68.42.76.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 19ms (Views: 18.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 68.42.76.249 at 2019-01-15 15:25:38 +0000
+Cannot render console from 68.42.76.249! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as */*
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"z4tcztbuJfbGiDrZGQZcnfge2eWGE9Oo6GD9/2YIYxWrq7YCjtWTzbo96FuGlF7W1leIG09HBh3zoZ+TNoPKBg==", "post"=>{"title"=>"Number 3", "description"=>"Number three."}}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Number 3"], ["description", "Number three."], ["created_at", "2019-01-15 15:25:38.951780"], ["updated_at", "2019-01-15 15:25:38.951780"]]
+  [1m[36m (2.1ms)[0m  [1mcommit transaction[0m
+[active_model_serializers] Rendered PostSerializer with ActiveModelSerializers::Adapter::Attributes (0.23ms)
+Completed 201 Created in 21ms (Views: 15.9ms | ActiveRecord: 2.4ms)
