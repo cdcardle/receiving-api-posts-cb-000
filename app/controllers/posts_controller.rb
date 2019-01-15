@@ -19,7 +19,7 @@ class PostsController < ApplicationController
 
   def create
     @post = Post.create(post_params)
-    render json: @post
+    render json: @post, status: 201
   end
 
   def edit
